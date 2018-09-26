@@ -8,4 +8,5 @@ trait GoogleUser extends js.Object {
   def getHostedDomain(): String
   def getGrantedScopes(): String
   def getBasicProfile(): BasicProfile
+  def getAuthResponse(): AuthResponse
 }
