@@ -1,6 +1,6 @@
 name := "googleapi.scala.js"
 organization := "com.outr"
-version := "0.1.1"
+version := "0.1.2"
 
 scalaVersion := "2.12.6"
 crossScalaVersions := List("2.12.6", "2.11.12")
