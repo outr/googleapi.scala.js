@@ -4,11 +4,11 @@ import scala.concurrent.{Future, Promise}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.{Failure, Success}
 
-class GoogleAPI(clientId: String) {
-  private lazy val init: Future[Unit] = {
+class GoogleAPI(clientId: String, load: List[String] = List("client", "auth2")) {
+  lazy val init: Future[Unit] = {
     val promise = Promise[Unit]
-    gapi.load("auth2", () => {
-      val options = new Options {}
+    gapi.load(load.mkString(":"), () => {
+      val options = new Auth2Options {}
       options.clientId = clientId
       val future = gapi.auth2.init(options).toFuture
       future.onComplete {

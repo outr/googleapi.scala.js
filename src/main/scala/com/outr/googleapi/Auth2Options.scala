@@ -2,7 +2,7 @@ package com.outr.googleapi
 
 import scala.scalajs.js
 
-trait Options extends js.Object {
+trait Auth2Options extends js.Object {
   var clientId: js.UndefOr[String] = js.undefined
   var cookiePolicy: js.UndefOr[String] = js.undefined
   var scope: js.UndefOr[String] = js.undefined
