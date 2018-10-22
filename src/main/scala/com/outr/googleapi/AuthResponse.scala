@@ -4,4 +4,5 @@ import scala.scalajs.js
 
 trait AuthResponse extends js.Object {
   def id_token: String
+  def access_token: String
 }
