@@ -1,6 +1,6 @@
 name := "googleapi.scala.js"
 organization := "com.outr"
-version := "0.1.3"
+version := "0.1.5"
 
 scalaVersion := "2.12.6"
 crossScalaVersions := List("2.12.6", "2.11.12")
@@ -8,7 +8,6 @@ scalacOptions += "-P:scalajs:sjsDefinedByDefault"
 
 enablePlugins(ScalaJSPlugin)
 
-jsDependencies += ProvidedJS / "platform.js"
 skip in packageJSDependencies := false
 
 publishTo in ThisBuild := sonatypePublishTo.value
@@ -25,11 +24,4 @@ scmInfo in ThisBuild := Some(
 )
 developers in ThisBuild := List(
   Developer(id="darkfrog", name="Matt Hicks", email="matt@matthicks.com", url=url("http://matthicks.com"))
-)
-
-val scalaJSDOM = "0.9.6"
-
-libraryDependencies ++= Seq(
-  "org.scala-js" %%% "scalajs-dom" % scalaJSDOM,
-  "com.outr" %%% "profig" % "2.3.1"
 )
